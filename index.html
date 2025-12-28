@@ -3,97 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Agenda tu cita médica en las comunas 1 y 2 de Armenia. Sistema rápido y fácil para gestionar tus turnos.">
-  <meta name="keywords" content="cita médica, Armenia, comuna 1, comuna 2, agendar cita, turno médico">
-  <title>CitaComuna - Agenda tu cita médica | Comunas 1 y 2 Armenia</title>
+  <meta name="description" content="Agenda tu cita médica en las comunas 1 y 2 de Armenia. Sistema rápido y fácil para gestionar tus turnos de salud.">
+  <title>CitaComuna - Gestiona tus citas médicas | Armenia</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="landing.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>🏥 CitaComuna</h1>
-    <p>Sistema de Agendamiento de Citas</p>
-    <div class="subtitle">
-      <span class="icon-medical">📍</span>
-      <span>Comunas 1 y 2 - Armenia, Quindío</span>
+<body class="landing-page">
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="#" class="top-link active">Personas</a>
+        <a href="#" class="top-link">Empresas</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="#" class="top-link">A+ Accesibilidad</a>
+        <a href="#" class="top-link">🔍 Buscar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo-section">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Escudo_de_Armenia_%28Quind%C3%ADo%29.svg" alt="Escudo Armenia" class="logo">
+        <div class="logo-text">
+          <span class="brand-name">Salud<span class="highlight">Comuna</span></span>
+          <span class="brand-sub">Armenia</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="#">Te ayudamos</a>
+        <a href="#">Encuéntranos</a>
+        <a href="#">Servicios</a>
+        <a href="formulario.html" class="btn-portal">Agendar Cita</a>
+      </nav>
     </div>
   </header>
 
-  <form id="formCita">
-    <h2 class="form-title">Registrar Nueva Cita</h2>
-    
-    <div class="form-grid">
-      <div class="form-group">
-        <label>
-          <span>👤 Nombre completo</span>
-          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required />
-        </label>
+  <!-- SUB NAV -->
+  <nav class="sub-nav">
+    <div class="container">
+      <div class="sub-nav-section primary">
+        <span class="nav-label">Servicios PBS</span>
+        <a href="#">Usuarios ▾</a>
       </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>
-            <span>🪪 Cédula</span>
-            <input type="text" id="cedula" name="cedula" placeholder="Ej: 1234567890" pattern="\d{6,10}" required />
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            <span>🎂 Edad</span>
-            <input type="number" id="edad" name="edad" placeholder="Años" min="1" max="120" required />
-          </label>
-        </div>
+      <div class="sub-nav-section secondary">
+        <span class="nav-label">Servicios Particulares</span>
+        <a href="#">Droguerías</a>
+        <a href="#">Dentivip ▾</a>
+        <a href="#">Oftalmología ▾</a>
+        <a href="#">Vacunación ▾</a>
+        <a href="#">Chequeos ▾</a>
+        <a href="#">Medicina alternativa ▾</a>
       </div>
-
-      <div class="form-group">
-        <label>
-          <span>📞 Teléfono</span>
-          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3001234567" required />
-        </label>
+      <div class="sub-nav-section tertiary">
+        <a href="#">Bienestar ▾</a>
       </div>
-
-      <div class="form-group">
-        <label>
-          <span>🏠 Dirección</span>
-          <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección completa" required />
-        </label>
-      </div>
-
-      <div class="form-group">
-        <label>
-          <span>📍 Comuna</span>
-          <select id="comuna" name="comuna" required>
-            <option value="">Seleccione su comuna...</option>
-            <option value="1">Comuna 1</option>
-            <option value="2">Comuna 2</option>
-          </select>
-        </label>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>
-            <span>📅 Fecha</span>
-            <input type="date" id="fecha" name="fecha" required />
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            <span>🕐 Hora</span>
-            <select id="hora" name="hora" required>
-              <option value="">Seleccione hora...</option>
-            </select>
-          </label>
-        </div>
-      </div>
-
-      <button type="submit">
-        ✅ Agendar Cita
-      </button>
     </div>
-  </form>
+  </nav>
 
-  <div id="mensaje"></div>
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="#">Inicio</a> / <span>Gestiona tus citas médicas</span>
+    </div>
+  </div>
 
-  <script src="script.js"></script>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-welcome">Te damos la bienvenida a</p>
+        <h1 class="hero-title">Gestiona tus citas médicas<br><span class="highlight-blue">SaludComuna</span></h1>
+        <p class="hero-description">
+          ¿Sabías que con un clic puedes agendar todas tus citas médicas? Aquí te 
+          enseñamos cómo debes hacerlo y qué tener en cuenta.
+        </p>
+        <a href="formulario.html" class="btn-cta">
+          📅 Agendar cita médica
+        </a>
+      </div>
+      <div class="hero-image">
+        <div class="image-decoration"></div>
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&h=600&fit=crop&crop=faces" alt="Doctor profesional">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="servicios-section">
+    <div class="container">
+      <h2>Servicios disponibles</h2>
+      <div class="cards-grid">
+        <div class="service-card">
+          <div class="card-icon">🏥</div>
+          <h3>Medicina general</h3>
+          <p>Agenda tu cita con tu médico familiar para consultas de rutina.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-icon">💉</div>
+          <h3>Vacunación</h3>
+          <p>Citas para vacunas infantiles, adultos mayores y viajeros.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-icon">🔬</div>
+          <h3>Chequeos</h3>
+          <p>Programa tus exámenes de rutina y laboratorio clínico.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-icon">👁️</div>
+          <h3>Oftalmología</h3>
+          <p>Consultas especializadas de vista y revisión ocular.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Escudo_de_Armenia_%28Quind%C3%ADo%29.svg" alt="Escudo Armenia" class="footer-logo">
+          <span>SaludComuna Armenia</span>
+        </div>
+        <div class="footer-info">
+          <p>© 2025 Alcaldía de Armenia - Comunas 1 y 2</p>
+          <p>Línea de atención: 018000-123456</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Política de privacidad</a>
+          <a href="#">Términos de uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/573218907254?text=Hola,%20quiero%20información%20sobre%20citas%20médicas%20en%20las%20comunas%201%20y%202%20de%20Armenia" 
+     target="_blank" 
+     class="whatsapp-float"
+     title="Contáctanos por WhatsApp">
+    <svg viewBox="0 0 32 32" class="whatsapp-icon">
+      <path fill="#fff" d="M16 0C7.163 0 0 7.163 0 16c0 2.837.736 5.502 2.022 7.821L0 32l8.414-2.014A15.937 15.937 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.165 22.748c-.349 1.003-2.048 1.868-2.825 1.947-.776.08-1.502.349-5.065-1.054-4.286-1.688-7.018-6.073-7.23-6.354-.21-.28-1.72-2.288-1.72-4.365s1.088-3.097 1.475-3.522c.387-.425.846-.531 1.128-.531.281 0 .563.003.809.015.26.012.608-.099.951.726.349.838 1.186 2.896 1.29 3.106.105.21.175.455.035.735-.14.28-.21.455-.42.7-.21.245-.442.547-.63.735-.21.21-.429.437-.184.856.245.42 1.088 1.796 2.339 2.91 1.607 1.432 2.962 1.877 3.382 2.087.42.21.665.175.91-.105.245-.28 1.052-1.227 1.332-1.652.28-.425.56-.35.945-.21.385.14 2.443 1.152 2.862 1.362.42.21.7.315.805.49.105.175.105 1.017-.244 2.02z"/>
+    </svg>
+  </a>
+
+  <!-- FEEDBACK BUTTON -->
+  <div class="feedback-btn">
+    <span>Compártenos tu opinión</span>
+  </div>
+
 </body>
 </html>
