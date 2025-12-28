@@ -1,0 +1,198 @@
+/* =============================================
+   FORM PAGE STYLES
+   ============================================= */
+
+.form-page {
+    padding: 0;
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-page::before {
+    display: none;
+}
+
+.form-page .main-header {
+    margin-bottom: 0;
+}
+
+.form-page .logo-section {
+    text-decoration: none;
+}
+
+.form-page .logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.active-link {
+    color: #0d9488 !important;
+    font-weight: 600 !important;
+}
+
+.form-section {
+    flex: 1;
+    padding: 2rem 0 4rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-header {
+    background: linear-gradient(135deg, #6b21a8 0%, #7c3aed 50%, #0d9488 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.form-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: none;
+    -webkit-text-fill-color: white;
+}
+
+.form-header p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.form-page form {
+    padding: 2rem;
+    margin: 0;
+    max-width: none;
+    box-shadow: none;
+    border-radius: 0;
+    animation: none;
+}
+
+.form-page form::before {
+    display: none;
+}
+
+.form-page .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.form-page .form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-page label {
+    color: #333;
+}
+
+.form-page input,
+.form-page select {
+    border: 2px solid #e0e0e0;
+    background: #fafafa;
+}
+
+.form-page input:focus,
+.form-page select:focus {
+    border-color: #0d9488;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1.1rem 2rem;
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.4);
+}
+
+.form-page #mensaje {
+    margin: 0 2rem 2rem;
+}
+
+.form-page .footer-logo {
+    height: 50px;
+    filter: none;
+    object-fit: contain;
+}
+
+/* =============================================
+   CONFIRMATION PAGE STYLES
+   ============================================= */
+
+.confirmation-page {
+    padding: 0;
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmation-page::before {
+    display: none;
+}
+
+.confirmation-section {
+    flex: 1;
+    padding: 2rem 0 4rem;
+}
+
+.confirmation-page .confirmation-container {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.confirmation-page .confirmation-card {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.confirmation-page .confirmation-header {
+    background: linear-gradient(135deg, #6b21a8 0%, #7c3aed 50%, #0d9488 100%);
+}
+
+.confirmation-page .confirmation-header h1 {
+    background: none;
+    -webkit-text-fill-color: white;
+}
+
+@media (max-width: 640px) {
+    .form-page .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-wrapper {
+        margin: 0 1rem;
+        border-radius: 16px;
+    }
+
+    .form-header {
+        padding: 1.5rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.5rem;
+    }
+}
