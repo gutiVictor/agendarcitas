@@ -3,79 +3,134 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Confirmación de cita médica - CitaComuna">
-  <title>Confirmación de Cita - CitaComuna</title>
+  <meta name="description" content="Confirmación de cita médica - SaludComuna Armenia">
+  <title>Confirmación de Cita - SaludComuna Armenia</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="landing.css" />
+  <link rel="stylesheet" href="forms.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
-<body>
-  <header>
-    <h1>🏥 CitaComuna</h1>
-    <p>Comunas 1 y 2 - Armenia, Quindío</p>
+<body class="confirmation-page">
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo-section">
+        <img src="https://aldesarrollo.gov.co/wp-content/uploads/2023/03/alcaldia-armenia-768x400.png.webp" alt="Alcaldía de Armenia" class="logo">
+        <div class="logo-text">
+          <span class="brand-name">Salud<span class="highlight">Comuna</span></span>
+          <span class="brand-sub">Armenia - Comunas 1 y 2</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="formulario.html">Agendar Cita</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="confirmation-container">
-    <div class="confirmation-card" id="cardToCapture">
-      <div class="confirmation-header">
-        <div class="check-icon">✅</div>
-        <h1>¡Cita Confirmada!</h1>
-        <p>Su turno ha sido agendado exitosamente</p>
-        <div class="turno-badge" id="turnoDisplay">Cargando...</div>
-      </div>
-      
-      <div class="confirmation-body">
-        <div class="info-grid">
-          <div class="info-item">
-            <span class="info-label">👤 Nombre</span>
-            <span class="info-value" id="nombreDisplay">-</span>
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Inicio</a> / <a href="formulario.html">Agendar cita</a> / <span>Confirmación</span>
+    </div>
+  </div>
+
+  <!-- CONFIRMATION SECTION -->
+  <main class="confirmation-section">
+    <div class="container">
+      <div class="confirmation-container">
+        <div class="confirmation-card" id="cardToCapture">
+          <div class="confirmation-header">
+            <div class="check-icon">✅</div>
+            <h1>¡Cita Confirmada!</h1>
+            <p>Su turno ha sido agendado exitosamente</p>
+            <div class="turno-badge" id="turnoDisplay">Cargando...</div>
           </div>
-          <div class="info-item">
-            <span class="info-label">🪪 Cédula</span>
-            <span class="info-value" id="cedulaDisplay">-</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">🎂 Edad</span>
-            <span class="info-value" id="edadDisplay">-</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">📞 Teléfono</span>
-            <span class="info-value" id="telefonoDisplay">-</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">🏠 Dirección</span>
-            <span class="info-value" id="direccionDisplay">-</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">📍 Comuna</span>
-            <span class="info-value" id="comunaDisplay">-</span>
+          
+          <div class="confirmation-body">
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">👤 Nombre</span>
+                <span class="info-value" id="nombreDisplay">-</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">🪪 Cédula</span>
+                <span class="info-value" id="cedulaDisplay">-</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">🎂 Edad</span>
+                <span class="info-value" id="edadDisplay">-</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">📞 Teléfono</span>
+                <span class="info-value" id="telefonoDisplay">-</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">🏠 Dirección</span>
+                <span class="info-value" id="direccionDisplay">-</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">📍 Comuna</span>
+                <span class="info-value" id="comunaDisplay">-</span>
+              </div>
+            </div>
+            
+            <div class="datetime-highlight">
+              <div class="datetime-box">
+                <div class="label">📅 Fecha</div>
+                <div class="value" id="fechaDisplay">-</div>
+              </div>
+              <div class="datetime-box">
+                <div class="label">🕐 Hora</div>
+                <div class="value" id="horaDisplay">-</div>
+              </div>
+            </div>
           </div>
         </div>
         
-        <div class="datetime-highlight">
-          <div class="datetime-box">
-            <div class="label">📅 Fecha</div>
-            <div class="value" id="fechaDisplay">-</div>
-          </div>
-          <div class="datetime-box">
-            <div class="label">🕐 Hora</div>
-            <div class="value" id="horaDisplay">-</div>
-          </div>
+        <div class="confirmation-actions">
+          <button class="btn-download" id="btnDescargar">
+            📥 Descargar Comprobante
+          </button>
+          <button class="btn-secondary" onclick="window.print()">
+            🖨️ Imprimir
+          </button>
+          <a href="formulario.html" class="btn-secondary">
+            ➕ Agendar otra cita
+          </a>
         </div>
       </div>
     </div>
-    
-    <div class="confirmation-actions">
-      <button class="btn-download" id="btnDescargar">
-        📥 Descargar Comprobante
-      </button>
-      <button class="btn-secondary" onclick="window.print()">
-        🖨️ Imprimir
-      </button>
-      <a href="index.html" class="btn-secondary">
-        ➕ Agendar otra cita
-      </a>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="https://aldesarrollo.gov.co/wp-content/uploads/2023/03/alcaldia-armenia-768x400.png.webp" alt="Alcaldía de Armenia" class="footer-logo">
+          <span>SaludComuna Armenia</span>
+        </div>
+        <div class="footer-info">
+          <p>© 2025 Alcaldía de Armenia - Comunas 1 y 2</p>
+          <p>Línea de atención: 018000-123456</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/573218907254?text=Hola,%20acabo%20de%20agendar%20una%20cita%20médica" 
+     target="_blank" 
+     class="whatsapp-float"
+     title="Contáctanos por WhatsApp">
+    <svg viewBox="0 0 32 32" class="whatsapp-icon">
+      <path fill="#fff" d="M16 0C7.163 0 0 7.163 0 16c0 2.837.736 5.502 2.022 7.821L0 32l8.414-2.014A15.937 15.937 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.165 22.748c-.349 1.003-2.048 1.868-2.825 1.947-.776.08-1.502.349-5.065-1.054-4.286-1.688-7.018-6.073-7.23-6.354-.21-.28-1.72-2.288-1.72-4.365s1.088-3.097 1.475-3.522c.387-.425.846-.531 1.128-.531.281 0 .563.003.809.015.26.012.608-.099.951.726.349.838 1.186 2.896 1.29 3.106.105.21.175.455.035.735-.14.28-.21.455-.42.7-.21.245-.442.547-.63.735-.21.21-.429.437-.184.856.245.42 1.088 1.796 2.339 2.91 1.607 1.432 2.962 1.877 3.382 2.087.42.21.665.175.91-.105.245-.28 1.052-1.227 1.332-1.652.28-.425.56-.35.945-.21.385.14 2.443 1.152 2.862 1.362.42.21.7.315.805.49.105.175.105 1.017-.244 2.02z"/>
+    </svg>
+  </a>
 
   <script src="confirmacion.js"></script>
 </body>
