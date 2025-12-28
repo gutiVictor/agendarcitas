@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Confirmación de cita médica - CitaComuna">
+  <title>Confirmación de Cita - CitaComuna</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🏥 CitaComuna</h1>
+    <p>Comunas 1 y 2 - Armenia, Quindío</p>
+  </header>
+
+  <div class="confirmation-container">
+    <div class="confirmation-card" id="cardToCapture">
+      <div class="confirmation-header">
+        <div class="check-icon">✅</div>
+        <h1>¡Cita Confirmada!</h1>
+        <p>Su turno ha sido agendado exitosamente</p>
+        <div class="turno-badge" id="turnoDisplay">Cargando...</div>
+      </div>
+      
+      <div class="confirmation-body">
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">👤 Nombre</span>
+            <span class="info-value" id="nombreDisplay">-</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">🪪 Cédula</span>
+            <span class="info-value" id="cedulaDisplay">-</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">🎂 Edad</span>
+            <span class="info-value" id="edadDisplay">-</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">📞 Teléfono</span>
+            <span class="info-value" id="telefonoDisplay">-</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">🏠 Dirección</span>
+            <span class="info-value" id="direccionDisplay">-</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">📍 Comuna</span>
+            <span class="info-value" id="comunaDisplay">-</span>
+          </div>
+        </div>
+        
+        <div class="datetime-highlight">
+          <div class="datetime-box">
+            <div class="label">📅 Fecha</div>
+            <div class="value" id="fechaDisplay">-</div>
+          </div>
+          <div class="datetime-box">
+            <div class="label">🕐 Hora</div>
+            <div class="value" id="horaDisplay">-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="confirmation-actions">
+      <button class="btn-download" id="btnDescargar">
+        📥 Descargar Comprobante
+      </button>
+      <button class="btn-secondary" onclick="window.print()">
+        🖨️ Imprimir
+      </button>
+      <a href="index.html" class="btn-secondary">
+        ➕ Agendar otra cita
+      </a>
+    </div>
+  </div>
+
+  <script src="confirmacion.js"></script>
+</body>
+</html>

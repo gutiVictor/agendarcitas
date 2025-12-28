@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Agenda tu cita médica en las comunas 1 y 2 de Armenia. Sistema rápido y fácil para gestionar tus turnos.">
+  <meta name="keywords" content="cita médica, Armenia, comuna 1, comuna 2, agendar cita, turno médico">
+  <title>CitaComuna - Agenda tu cita médica | Comunas 1 y 2 Armenia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🏥 CitaComuna</h1>
+    <p>Sistema de Agendamiento de Citas</p>
+    <div class="subtitle">
+      <span class="icon-medical">📍</span>
+      <span>Comunas 1 y 2 - Armenia, Quindío</span>
+    </div>
+  </header>
+
+  <form id="formCita">
+    <h2 class="form-title">Registrar Nueva Cita</h2>
+    
+    <div class="form-grid">
+      <div class="form-group">
+        <label>
+          <span>👤 Nombre completo</span>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required />
+        </label>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>
+            <span>🪪 Cédula</span>
+            <input type="text" id="cedula" name="cedula" placeholder="Ej: 1234567890" pattern="\d{6,10}" required />
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <span>🎂 Edad</span>
+            <input type="number" id="edad" name="edad" placeholder="Años" min="1" max="120" required />
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <span>📞 Teléfono</span>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3001234567" required />
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <span>🏠 Dirección</span>
+          <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección completa" required />
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <span>📍 Comuna</span>
+          <select id="comuna" name="comuna" required>
+            <option value="">Seleccione su comuna...</option>
+            <option value="1">Comuna 1</option>
+            <option value="2">Comuna 2</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>
+            <span>📅 Fecha</span>
+            <input type="date" id="fecha" name="fecha" required />
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <span>🕐 Hora</span>
+            <select id="hora" name="hora" required>
+              <option value="">Seleccione hora...</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit">
+        ✅ Agendar Cita
+      </button>
+    </div>
+  </form>
+
+  <div id="mensaje"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
