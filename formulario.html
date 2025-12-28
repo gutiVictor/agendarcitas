@@ -4,95 +4,150 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Agenda tu cita médica en las comunas 1 y 2 de Armenia. Sistema rápido y fácil para gestionar tus turnos.">
-  <meta name="keywords" content="cita médica, Armenia, comuna 1, comuna 2, agendar cita, turno médico">
-  <title>CitaComuna - Agenda tu cita médica | Comunas 1 y 2 Armenia</title>
+  <title>Agendar Cita - SaludComuna Armenia</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="landing.css" />
+  <link rel="stylesheet" href="forms.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>🏥 CitaComuna</h1>
-    <p>Sistema de Agendamiento de Citas</p>
-    <div class="subtitle">
-      <span class="icon-medical">📍</span>
-      <span>Comunas 1 y 2 - Armenia, Quindío</span>
+<body class="form-page">
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo-section">
+        <img src="https://aldesarrollo.gov.co/wp-content/uploads/2023/03/alcaldia-armenia-768x400.png.webp" alt="Alcaldía de Armenia" class="logo">
+        <div class="logo-text">
+          <span class="brand-name">Salud<span class="highlight">Comuna</span></span>
+          <span class="brand-sub">Armenia - Comunas 1 y 2</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="#" class="active-link">Agendar Cita</a>
+      </nav>
     </div>
   </header>
 
-  <form id="formCita">
-    <h2 class="form-title">Registrar Nueva Cita</h2>
-    
-    <div class="form-grid">
-      <div class="form-group">
-        <label>
-          <span>👤 Nombre completo</span>
-          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required />
-        </label>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>
-            <span>🪪 Cédula</span>
-            <input type="text" id="cedula" name="cedula" placeholder="Ej: 1234567890" pattern="\d{6,10}" required />
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            <span>🎂 Edad</span>
-            <input type="number" id="edad" name="edad" placeholder="Años" min="1" max="120" required />
-          </label>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>
-          <span>📞 Teléfono</span>
-          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3001234567" required />
-        </label>
-      </div>
-
-      <div class="form-group">
-        <label>
-          <span>🏠 Dirección</span>
-          <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección completa" required />
-        </label>
-      </div>
-
-      <div class="form-group">
-        <label>
-          <span>📍 Comuna</span>
-          <select id="comuna" name="comuna" required>
-            <option value="">Seleccione su comuna...</option>
-            <option value="1">Comuna 1</option>
-            <option value="2">Comuna 2</option>
-          </select>
-        </label>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>
-            <span>📅 Fecha</span>
-            <input type="date" id="fecha" name="fecha" required />
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            <span>🕐 Hora</span>
-            <select id="hora" name="hora" required>
-              <option value="">Seleccione hora...</option>
-            </select>
-          </label>
-        </div>
-      </div>
-
-      <button type="submit">
-        ✅ Agendar Cita
-      </button>
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Inicio</a> / <span>Agendar cita médica</span>
     </div>
-  </form>
+  </div>
 
-  <div id="mensaje"></div>
+  <!-- FORM SECTION -->
+  <main class="form-section">
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="form-header">
+          <h1>📅 Agendar Nueva Cita</h1>
+          <p>Complete el formulario para reservar su cita médica</p>
+        </div>
+
+        <form id="formCita">
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>
+                <span>👤 Nombre completo</span>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <span>🪪 Cédula</span>
+                <input type="text" id="cedula" name="cedula" placeholder="Ej: 1234567890" pattern="\d{6,10}" required />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <span>🎂 Edad</span>
+                <input type="number" id="edad" name="edad" placeholder="Años" min="1" max="120" required />
+              </label>
+            </div>
+
+            <div class="form-group full-width">
+              <label>
+                <span>📞 Teléfono</span>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3001234567" required />
+              </label>
+            </div>
+
+            <div class="form-group full-width">
+              <label>
+                <span>🏠 Dirección</span>
+                <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección completa" required />
+              </label>
+            </div>
+
+            <div class="form-group full-width">
+              <label>
+                <span>📍 Comuna</span>
+                <select id="comuna" name="comuna" required>
+                  <option value="">Seleccione su comuna...</option>
+                  <option value="1">Comuna 1</option>
+                  <option value="2">Comuna 2</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <span>📅 Fecha</span>
+                <input type="date" id="fecha" name="fecha" required />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <span>🕐 Hora</span>
+                <select id="hora" name="hora" required>
+                  <option value="">Seleccione hora...</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-group full-width">
+              <button type="submit" class="btn-submit">
+                ✅ Confirmar Cita
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div id="mensaje"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="https://aldesarrollo.gov.co/wp-content/uploads/2023/03/alcaldia-armenia-768x400.png.webp" alt="Alcaldía de Armenia" class="footer-logo">
+          <span>SaludComuna Armenia</span>
+        </div>
+        <div class="footer-info">
+          <p>© 2025 Alcaldía de Armenia - Comunas 1 y 2</p>
+          <p>Línea de atención: 018000-123456</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/573218907254?text=Hola,%20quiero%20información%20sobre%20citas%20médicas" 
+     target="_blank" 
+     class="whatsapp-float"
+     title="Contáctanos por WhatsApp">
+    <svg viewBox="0 0 32 32" class="whatsapp-icon">
+      <path fill="#fff" d="M16 0C7.163 0 0 7.163 0 16c0 2.837.736 5.502 2.022 7.821L0 32l8.414-2.014A15.937 15.937 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.165 22.748c-.349 1.003-2.048 1.868-2.825 1.947-.776.08-1.502.349-5.065-1.054-4.286-1.688-7.018-6.073-7.23-6.354-.21-.28-1.72-2.288-1.72-4.365s1.088-3.097 1.475-3.522c.387-.425.846-.531 1.128-.531.281 0 .563.003.809.015.26.012.608-.099.951.726.349.838 1.186 2.896 1.29 3.106.105.21.175.455.035.735-.14.28-.21.455-.42.7-.21.245-.442.547-.63.735-.21.21-.429.437-.184.856.245.42 1.088 1.796 2.339 2.91 1.607 1.432 2.962 1.877 3.382 2.087.42.21.665.175.91-.105.245-.28 1.052-1.227 1.332-1.652.28-.425.56-.35.945-.21.385.14 2.443 1.152 2.862 1.362.42.21.7.315.805.49.105.175.105 1.017-.244 2.02z"/>
+    </svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
